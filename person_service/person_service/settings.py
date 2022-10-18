@@ -81,11 +81,11 @@ WSGI_APPLICATION = "person_service.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": "persons",
-        "USER": "postgres",
-        "HOST": "localhost",
+        "NAME": "da23b7l2qggion",
+        "USER": "txkmmugqqivblf",
+        "HOST": "ec2-54-228-32-29.eu-west-1.compute.amazonaws.com",
         "PORT": 5432,
-        "PASSWORD": "postgres"
+        "PASSWORD": "c7bf4c925bfd5027bbf09b70db594d8e64175774d836b6cb8f7ddd243ed37873"
     }
 }
 
