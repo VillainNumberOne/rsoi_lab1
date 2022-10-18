@@ -9,7 +9,7 @@ COPY . /code/
 RUN pip install .
 RUN pip install -r requirements_dev.txt
 
-EXPOSE 8080
-ENV PORT=8080
+# EXPOSE 8080
+# ENV PORT=8080
 
 CMD ["sh", "./entrypoint.sh"]
