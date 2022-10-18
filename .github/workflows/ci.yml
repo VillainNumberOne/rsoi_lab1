@@ -32,15 +32,6 @@ jobs:
         run: |
             pytest .
 
-      # - name: Build, Push and Deploy to Heroku #set the whatever name you want to this step
-      #   id: heroku
-      #   uses: jctaveras/heroku-deploy@v1.0.0  # use the latest version of the action
-      #   with:
-      #     email: ${{ secrets.HEROKU_EMAIL }} # your heroku email
-      #     api_key: ${{ secrets.HEROKU_API_KEY }} # your  heroku api key
-      #     app_name: ${{ secrets.HEROKU_APP_NAME }} # you aplication name
-      #     dockerfile: '.' # set the path to the folder wher the Dokerfile is located
-
       - name: Deploy project
         uses: akhileshns/heroku-deploy@v3.4.6
         with:
@@ -52,11 +43,11 @@ jobs:
       # - name: Upload coverage to Codecov
       #   uses: codecov/codecov-action@v3
 
-      # - name: Run API Tests
-      #   id: run-newman
-      #   uses: anthonyvscode/newman-action@v1
-      #   with:
-      #     collection: postman/[ins  t] Lab1.postman_collection.json
-      #     environment: postman/[inst][heroku] Lab1.postman_environment.json
-      #     delayRequest: 50
-      #     reporters: cli
+      - name: Run API Tests
+        id: run-newman
+        uses: anthonyvscode/newman-action@v1
+        with:
+          collection: postman/[inst] Lab1.postman_collection.json
+          environment: postman/[inst][heroku] Lab1.postman_environment.json
+          delayRequest: 50
+          reporters: cli
