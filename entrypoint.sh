@@ -1,0 +1,1 @@
+py person_service/manage.py runserver 8080
